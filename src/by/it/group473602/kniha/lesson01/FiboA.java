@@ -29,14 +29,15 @@ public class FiboA {
     private int calc(int n) {
         //здесь простейший вариант, в котором код совпадает с мат.определением чисел Фибоначчи
         //время O(2^n)
-        int prev, next, sum;
-        prev =1; next =1; sum =0;
+        int previous = 1;
+        int next = 1;
+        int summary = 0;
         for(int i = 2; n > i; i++){
-            sum = prev + next;
-            prev = next;
-            next = sum;
+            summary = previous + next;
+            previous = next;
+            next = summary;
         }
-        return sum;
+        return summary;
     }
 
 

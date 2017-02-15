@@ -32,8 +32,9 @@ public class FiboB {
         List<BigInteger> array = new ArrayList<>();
         array.add(BigInteger.ONE);
         array.add(BigInteger.ONE);
-        if (n==1 || n==2)
+        if (n==1 || n==2) {
             return BigInteger.ONE;
+        }
         for (int i = 2; i < n + 1; i++) {
             array.add(array.get(i - 2).add(array.get(i - 1)));
         }

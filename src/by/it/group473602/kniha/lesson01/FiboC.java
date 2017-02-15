@@ -19,8 +19,8 @@ public class FiboC {
 
     public static void main(String[] args) {
         FiboC fibo = new FiboC();
-        int n = 10;
-        int m = 2;
+        int n = 12;
+        int m = 4;
         System.out.printf("fasterC(%d)=%d \n\t time=%d \n\n", n, fibo.fasterC(n, m), fibo.time());
     }
 
@@ -29,12 +29,11 @@ public class FiboC {
         //вам потребуется дополнительный поиск информации
         //см. период Пизано
         List<Long> array = new ArrayList<>();
-        int i = 2, k = 0;
+        int i = 2;
         array.add((long) 0);
         array.add((long) 1);
         while (i < n+1) {
                 array.add((array.get(i-1)+array.get(i-2))% m);
-                k = k+1;
             if (array.get(i) == 0 && array.get(i-1) == 1) {
                 array.remove(array.size() - 1);
                 break;
